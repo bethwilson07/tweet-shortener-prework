@@ -15,9 +15,11 @@ end
 
 def word_substituter(tweet)
   tweet.split.collect do |word|
-    if word.include?(keys)
-      word.gsub(dictionary.values)
+    if dictionary.keys.include?(word.downcase)
+      word = dictionary[word.downcase]
+    else
+      word
     end
-  end
-  tweet.to_s.flatten
+  end.join(" ")
+  tweet
 end
