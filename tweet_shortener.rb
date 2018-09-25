@@ -28,8 +28,6 @@ def bulk_tweet_shortener(tweets)
   tweets.each do |tweet|
     edited_tweets << word_substituter(tweet)
   end
-  edited_tweets
+  puts edited_tweets
 end
 
-puts bulk_tweet_shortener 
-  
