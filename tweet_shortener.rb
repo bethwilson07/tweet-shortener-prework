@@ -13,8 +13,7 @@ def dictionary
   }
 end
 
-def word_substitutioner(tweet)
-  keys = dictionary.keys
+def word_substituter(tweet)
   tweet.split.collect do |word|
     if word.include?(keys)
       word.gsub(dictionary.values)
