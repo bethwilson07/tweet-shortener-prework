@@ -29,3 +29,14 @@ def bulk_tweet_shortener(tweets)
   end
 end
 
+def selective_tweet_shortener(tweets)
+  tweets.each do |tweet|
+    if tweet.split.count > 140
+      puts bulk_tweet_shortener(tweet)
+    else
+      tweet
+    end
+  end
+end
+
+
